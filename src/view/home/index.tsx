@@ -8,7 +8,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen'
-import Section from '../../compoments/select'
+import Section from '@/compoments/select'
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
