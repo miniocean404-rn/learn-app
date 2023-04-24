@@ -1,3 +1,4 @@
+import Section from '@/compoments/select'
 import React from 'react'
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
 
@@ -8,7 +9,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen'
-import Section from '@/compoments/select'
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
