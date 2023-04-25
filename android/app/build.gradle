@@ -131,9 +131,8 @@ android {
         }
     }
 
-    flavorDimensions "type"
-
     // 变种
+    flavorDimensions "type"
     productFlavors {
         //  设置 res/values/strings 中的 <string name="app_name">LearnApp</string>
         //  设置的是包名
