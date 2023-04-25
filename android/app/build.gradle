@@ -131,6 +131,22 @@ android {
         }
     }
 
+    flavorDimensions "type"
+
+    // 变种
+    productFlavors {
+        //  设置 res/values/strings 中的 <string name="app_name">LearnApp</string>
+        //  设置的是包名
+        //  react-native run-android --variant=devDebug 指的是 productFlavors dev 和 buildTypes 的Debug
+        dev{
+            resValue("string","app_name","测试包")
+        }
+
+        prd{
+            resValue("string","app_name","生产包")
+        }
+    }
+
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->

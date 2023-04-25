@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   highlight: {
+    marginTop: 32,
     fontWeight: '700',
   },
 })
