@@ -1,0 +1,3 @@
+type BaseProps = {
+  name: string
+}
