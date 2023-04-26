@@ -1,6 +1,3 @@
-import SystemFlatList from '@/learn/system-components/flatList'
-import SystemScrollView from '@/learn/system-components/scrollview'
-
 const Home = (): JSX.Element => {
   return (
     <>
@@ -15,8 +12,7 @@ const Home = (): JSX.Element => {
       {/* <SystemTouchableWithoutFeedback></SystemTouchableWithoutFeedback> */}
       {/* <SystemButton></SystemButton> */}
       {/* <SystemScrollView></SystemScrollView> */}
-
-      <SystemFlatList></SystemFlatList>
+      {/* <SystemFlatList></SystemFlatList> */}
     </>
   )
 }
