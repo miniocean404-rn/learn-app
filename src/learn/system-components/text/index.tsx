@@ -24,9 +24,16 @@ const SystemText = (): JSX.Element => {
           onPress={onPress}
           onLongPress={onLongPress}
           allowFontScaling>
-          文字
+          {'文字这么写可以换行 \n  换行啦'}
           {/* 嵌套文字无法添加 margin padding 只能通过空格进行添加 */}
           <Text style={styles.innerText}>文字嵌套</Text>
+          文字
+        </Text>
+
+        <Text>
+          {'文字这么写可以换行 \n换行啦'}
+          {/* 嵌套文字无法添加 margin padding 只能通过 空格 \n 进行添加 */}
+          <Text style={[]}>文字嵌套</Text>
           文字
         </Text>
       </View>

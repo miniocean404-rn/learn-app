@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', // 安卓只有 bold 和 normal
     // 使用 fontFamily ,要在 android/app/src/main 下创建 assets/fonts 并且 放入字体文件，字体放完后重启项目
 
-    // 对于文字自定义宽高时候使用，可以设置文字的 位置
+    // 对于文字自定义宽高时候使用，可以设置文字的位置
     width: 50,
     height: 300,
     backgroundColor: 'blue',
