@@ -55,10 +55,6 @@ const SystemScrollView = () => {
         // never handled 的区别是 never 在有点击按钮的时先收起键盘，但是不会触发点击事件，第二次点击才触发 handled 一直会触发
         // always 不消失
         keyboardShouldPersistTaps="handled"
-        // 这两个方法都只有松手时候才会触发 onMomentumScrollEnd 会触发多次
-        onMomentumScrollBegin={onMomentumScrollBegin}
-        onMomentumScrollEnd={onMomentumScrollEnd}
-        onScroll={onScroll}
         // IOS 特有属性 IOS 必须写，控制每多少毫秒回调一次 onScroll，是根据每一帧进行回调的 16 就是最小时间
         scrollEventThrottle={16}
         // 超出滚动区域后还进行拉伸时 always 会有轻微拉伸或者水波纹效果，根据系统变化 never 什么效果都没有
@@ -67,11 +63,15 @@ const SystemScrollView = () => {
         scrollEnabled
         // 初始滚动距离
         contentOffset={{ x: 0, y: 100 }}
+        // 第几个元素吸顶，滚动到超过其位置，这个元素在顶部不动
+        stickyHeaderIndices={[3]}
         // 是否显示滚动条 分别为横向和纵向
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
-        // 第几个元素吸顶，滚动到超过其位置，这个元素在顶部不动
-        stickyHeaderIndices={[3]}
+        // 这两个方法都只有松手时候才会触发 onMomentumScrollEnd 会触发多次
+        onMomentumScrollBegin={onMomentumScrollBegin}
+        onMomentumScrollEnd={onMomentumScrollEnd}
+        onScroll={onScroll}
       >
         <TextInput style={styles.input}></TextInput>
 
