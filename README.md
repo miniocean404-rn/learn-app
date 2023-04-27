@@ -128,3 +128,100 @@ const HocType = <D extends BaseProps, F>(Component: React.FC<D & F>, argument: F
   return HOCView
 }
 ```
+
+### 原生安卓注册 scheme 和 隐式报名跳转 intent
+
+1. 安卓原生 `app/src/main/java/com/learnapp/` 创建一个 activety
+
+   ```java
+      package com.learnapp;
+
+      import android.content.Intent;
+      import android.net.Uri;
+      import android.os.Bundle;
+      import android.os.PersistableBundle;
+      import android.widget.TextView;
+
+      import androidx.annotation.Nullable;
+      import androidx.appcompat.app.AppCompatActivity;
+
+
+      public class LinkJumpActivity extends AppCompatActivity {
+          @Override
+          public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+              super.onCreate(savedInstanceState, persistentState);
+
+              setContentView(R.layout.activity_link_jump);
+
+              TextView tv = findViewById(R.id.tv_link_jump);
+              tv.setText("目标页面");
+
+              // openUrl 方式
+              // 获取 scheme 参数
+              Intent intent = getIntent();
+              Uri data = intent.getData();
+              if (data != null) {
+                  String name = data.getQueryParameter("name");
+                  tv.setText("scheme跳转-姓名" + name);
+              }
+
+              // sendIntent 方式
+              // 获取隐式跳转 intent 的参数
+              String name = intent.getStringExtra("name");
+              if (name != null) {
+                  tv.setText("隐式跳转-姓名" + name);
+              }
+          }
+      }
+   ```
+
+2. 在`app/src/main/res/layout`创建 layout,并且添加按钮
+
+   ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="16dp"
+      >
+
+      <TextView
+          android:id="@+id/tv_link_jump"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="20sp"
+          android:textColor="#303030"
+          android:textStyle="bold"
+          android:text="直接在按钮上设置文字"
+          />
+    </LinearLayout>
+   ```
+
+3. `app/src/main/AndroidManifest.xml` 注册 scheme
+
+```xml
+        <!--原生安卓注册 intent-->
+        <activity
+            android:name=".LinkJumpActivity"
+            android:exported="true">
+            <!-- 原生隐式跳转 -->
+            <intent-filter>
+                <!-- 必须指定 <category android:name="android.intent.category.DEFAULT" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- 这个路径是自定义的 com.learnapp.link_jump_test 会跳转到 .LinkJumpActivity 中-->
+                <action android:name="com.learnapp.link_jump_test"/>
+            </intent-filter>
+
+            <!-- 原生 scheme 跳转 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <!-- 必须指定 <category android:name="android.intent.category.DEFAULT" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="test" android:host="demo" />
+            </intent-filter>
+        </activity>
+```

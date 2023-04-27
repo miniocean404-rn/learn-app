@@ -1,3 +1,4 @@
+import { UseLinking } from '@/learn/api/common/linking'
 import { Button } from 'react-native'
 
 const Home = (): JSX.Element => {
@@ -22,7 +23,12 @@ const Home = (): JSX.Element => {
       {/* <SystemSwitch></SystemSwitch> */}
       {/* <SystemPressable></SystemPressable> */}
 
-      <Button title="按钮" onPress={() => {}} />
+      <Button
+        title="按钮"
+        onPress={() => {
+          UseLinking()
+        }}
+      />
     </>
   )
 }
