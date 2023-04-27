@@ -15,8 +15,7 @@ const Home = (): JSX.Element => {
       {/* <SystemButton></SystemButton> */}
       {/* <SystemScrollView></SystemScrollView> */}
       {/* <SystemFlatList></SystemFlatList> */}
-
-      <SystemSectionList></SystemSectionList>
+      {/* <SystemSectionList></SystemSectionList> */}
     </>
   )
 }

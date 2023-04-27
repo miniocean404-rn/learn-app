@@ -26,7 +26,7 @@ const SectionData = [
   { data: [77, 88, 99], type: 'B' },
 ]
 
-// 内容分组滚动
+// 内容分组滚动,最强的滚动组件
 const SystemSectionList = () => {
   const sectionRef = useRef<SectionList>(null)
 
