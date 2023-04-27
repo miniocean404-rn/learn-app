@@ -140,6 +140,7 @@ const HocType = <D extends BaseProps, F>(Component: React.FC<D & F>, argument: F
       import android.net.Uri;
       import android.os.Bundle;
       import android.os.PersistableBundle;
+      import android.util.Log;
       import android.widget.TextView;
 
       import androidx.annotation.Nullable;
@@ -148,8 +149,11 @@ const HocType = <D extends BaseProps, F>(Component: React.FC<D & F>, argument: F
 
       public class LinkJumpActivity extends AppCompatActivity {
           @Override
-          public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-              super.onCreate(savedInstanceState, persistentState);
+
+          // 在这个方法中调用setContentView方法不能设置布局
+          // public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+          protected  void onCreate(@Nullable Bundle savedInstanceState) {
+              super.onCreate(savedInstanceState);
 
               setContentView(R.layout.activity_link_jump);
 
@@ -163,6 +167,8 @@ const HocType = <D extends BaseProps, F>(Component: React.FC<D & F>, argument: F
               if (data != null) {
                   String name = data.getQueryParameter("name");
                   tv.setText("scheme跳转-姓名" + name);
+
+                  Log.i('日志',name)
               }
 
               // sendIntent 方式
@@ -170,6 +176,7 @@ const HocType = <D extends BaseProps, F>(Component: React.FC<D & F>, argument: F
               String name = intent.getStringExtra("name");
               if (name != null) {
                   tv.setText("隐式跳转-姓名" + name);
+                  Log.i('日志',name)
               }
           }
       }
