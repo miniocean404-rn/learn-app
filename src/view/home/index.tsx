@@ -1,3 +1,5 @@
+import { Button } from 'react-native'
+
 const Home = (): JSX.Element => {
   return (
     <>
@@ -19,6 +21,8 @@ const Home = (): JSX.Element => {
       {/* <SystemStatusBar></SystemStatusBar> */}
       {/* <SystemSwitch></SystemSwitch> */}
       {/* <SystemPressable></SystemPressable> */}
+
+      <Button title="按钮" onPress={() => {}} />
     </>
   )
 }
