@@ -32,7 +32,7 @@ public class LinkJumpActivity extends AppCompatActivity {
             String name = data.getQueryParameter("name");
             tv.setText("scheme跳转-姓名" + name);
 
-            Log.i('日志',name)
+            Log.i("日志",name);
         }
 
         // sendIntent 方式
@@ -40,7 +40,7 @@ public class LinkJumpActivity extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         if (name != null) {
             tv.setText("隐式跳转-姓名" + name);
-            Log.i('日志',name)
+            Log.i("日志",name);
         }
     }
 }
