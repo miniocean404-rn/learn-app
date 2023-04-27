@@ -1,5 +1,9 @@
 # 学习
 
+### 启动项目
+
+先启动 `react-native start`再启动 `android` 就不会产生新的终端
+
 ### Android 变种
 
 命令

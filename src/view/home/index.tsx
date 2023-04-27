@@ -1,5 +1,3 @@
-import SystemSectionList from '@/learn/system-components/scroll/sectionList'
-
 const Home = (): JSX.Element => {
   return (
     <>
@@ -16,6 +14,11 @@ const Home = (): JSX.Element => {
       {/* <SystemScrollView></SystemScrollView> */}
       {/* <SystemFlatList></SystemFlatList> */}
       {/* <SystemSectionList></SystemSectionList> */}
+      {/* <SystemModal></SystemModal> */}
+      {/* <SystemRefreshControl></SystemRefreshControl> */}
+      {/* <SystemStatusBar></SystemStatusBar> */}
+      {/* <SystemSwitch></SystemSwitch> */}
+      {/* <SystemPressable></SystemPressable> */}
     </>
   )
 }
