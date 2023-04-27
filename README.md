@@ -1,5 +1,9 @@
 # 学习
 
+## 社区 Hook @react-native-community/hooks
+
+rn 很多库包括官方的很多库都在这个社区了
+
 ### 启动项目
 
 先启动 `react-native start`再启动 `android` 就不会产生新的终端

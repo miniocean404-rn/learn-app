@@ -1,5 +1,7 @@
-import { UseLinking } from '@/learn/api/common/linking'
-import { Button } from 'react-native'
+import AnimationLinearGardient from '@/learn/animation/linear-gradient'
+import AnimationMove from '@/learn/animation/move'
+import AnimationRotate from '@/learn/animation/rotate'
+import AnimationScale from '@/learn/animation/scale'
 
 const Home = (): JSX.Element => {
   return (
@@ -23,12 +25,8 @@ const Home = (): JSX.Element => {
       {/* <SystemSwitch></SystemSwitch> */}
       {/* <SystemPressable></SystemPressable> */}
 
-      <Button
-        title="按钮"
-        onPress={() => {
-          UseLinking()
-        }}
-      />
+      <AnimationMove></AnimationMove>
+      {/* <AnimationLinearGardient></AnimationLinearGardient> */}
     </>
   )
 }
