@@ -1,7 +1,4 @@
-import AnimationLinearGardient from '@/learn/animation/linear-gradient'
-import AnimationMove from '@/learn/animation/move'
-import AnimationRotate from '@/learn/animation/rotate'
-import AnimationScale from '@/learn/animation/scale'
+import LayoutAnimationView from '@/learn/animation/layout-animation'
 
 const Home = (): JSX.Element => {
   return (
@@ -25,8 +22,15 @@ const Home = (): JSX.Element => {
       {/* <SystemSwitch></SystemSwitch> */}
       {/* <SystemPressable></SystemPressable> */}
 
-      <AnimationMove></AnimationMove>
+      {/* <AnimationMove></AnimationMove> */}
       {/* <AnimationLinearGardient></AnimationLinearGardient> */}
+      {/* <AnimationFn></AnimationFn> */}
+      {/* <AnimationTiming></AnimationTiming> */}
+      {/* <AnimationValueXY></AnimationValueXY> */}
+      {/* <AnimationCombined></AnimationCombined> */}
+      {/* <FollowAnimation></FollowAnimation> */}
+      {/* <CustomModal></CustomModal> */}
+      <LayoutAnimationView></LayoutAnimationView>
     </>
   )
 }

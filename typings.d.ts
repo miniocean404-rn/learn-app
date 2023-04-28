@@ -4,22 +4,24 @@
 //    interface xx {
 // }
 // }
+
 import * as rn from 'react-native/types'
+
 declare global {
   interface AlterFn {
     (any): void
   }
 
   var alert: AlterFn
-}
 
-declare module '*.svg'
-declare module '*.png'
-declare module '*.jpg'
-declare module '*.jpeg'
-declare module '*.gif'
-declare module '*.bmp'
-declare module '*.tiff'
+  declare module '*.svg'
+  declare module '*.png'
+  declare module '*.jpg'
+  declare module '*.jpeg'
+  declare module '*.gif'
+  declare module '*.bmp'
+  declare module '*.tiff'
+}
 
 type BaseProps = {
   name: string
