@@ -10,7 +10,7 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LearnPackage  implements ReactPackage {
+public class LearnAppPackage implements ReactPackage {
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext context) {
@@ -22,6 +22,7 @@ public class LearnPackage  implements ReactPackage {
     @NonNull
     @Override
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactApplicationContext) {
-        return null;
+        List<ViewManager> viewManagers = new ArrayList<>();
+        return viewManagers;
     }
 }

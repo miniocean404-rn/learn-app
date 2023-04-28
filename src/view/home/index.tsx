@@ -1,4 +1,6 @@
-import LayoutAnimationView from '@/learn/animation/layout-animation'
+import { getNativeContanst } from '@/learn/js-bridge/get-native-contanst'
+import { useNativeMethod } from '@/learn/js-bridge/use-native-method'
+import { Button } from 'react-native'
 
 const Home = (): JSX.Element => {
   return (
@@ -30,7 +32,14 @@ const Home = (): JSX.Element => {
       {/* <AnimationCombined></AnimationCombined> */}
       {/* <FollowAnimation></FollowAnimation> */}
       {/* <CustomModal></CustomModal> */}
-      <LayoutAnimationView></LayoutAnimationView>
+      {/* <LayoutAnimationView></LayoutAnimationView> */}
+
+      <Button
+        title="按钮"
+        onPress={() => {
+          getNativeContanst()
+        }}
+      ></Button>
     </>
   )
 }
