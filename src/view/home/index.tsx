@@ -1,4 +1,5 @@
 import GetNativeComponents, { NativeInfoView } from '@/learn/js-bridge/get-native-components'
+import GetNativeContainerComponents from '@/learn/js-bridge/get-native-container-components'
 import { getNativeContanst } from '@/learn/js-bridge/get-native-contanst'
 import { Button, View } from 'react-native'
 
@@ -34,7 +35,7 @@ const Home = (): JSX.Element => {
       {/* <CustomModal></CustomModal> */}
       {/* <LayoutAnimationView></LayoutAnimationView> */}
 
-      <GetNativeComponents></GetNativeComponents>
+      <GetNativeContainerComponents></GetNativeContainerComponents>
       <Button
         title="按钮"
         onPress={() => {

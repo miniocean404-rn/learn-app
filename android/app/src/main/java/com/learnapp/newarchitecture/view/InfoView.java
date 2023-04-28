@@ -24,6 +24,7 @@ import com.learnapp.R;
 
 import java.util.Objects;
 
+// 原生组件带属性及回调方法
 public class InfoView extends LinearLayout implements View.OnClickListener {
 
     ImageView avatarImg;

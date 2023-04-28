@@ -8,6 +8,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.learnapp.newarchitecture.rn.module.AppModule;
 import com.learnapp.newarchitecture.viewmanager.InfoViewManager;
+import com.learnapp.newarchitecture.viewmanager.infoViewContainerManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ public class LearnAppPackage implements ReactPackage {
         List<ViewManager> views = new ArrayList<>();
         
         views.add(new InfoViewManager(context));
+        views.add(new infoViewContainerManager());
         return views;
     }
 }
