@@ -1,4 +1,4 @@
-package com.learnapp.newarchitecture.rn.utils;
+package com.learnapp.newarchitecture.utils;
 
 import android.app.Activity;
 import android.content.Intent;

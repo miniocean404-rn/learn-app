@@ -6,6 +6,8 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
+import com.learnapp.newarchitecture.rn.module.AppModule;
+import com.learnapp.newarchitecture.viewmanager.InfoViewManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +23,10 @@ public class LearnAppPackage implements ReactPackage {
 
     @NonNull
     @Override
-    public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactApplicationContext) {
-        List<ViewManager> viewManagers = new ArrayList<>();
-        return viewManagers;
+    public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext context) {
+        List<ViewManager> views = new ArrayList<>();
+        
+        views.add(new InfoViewManager(context));
+        return views;
     }
 }

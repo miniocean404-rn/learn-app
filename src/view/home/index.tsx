@@ -1,10 +1,10 @@
+import GetNativeComponents, { NativeInfoView } from '@/learn/js-bridge/get-native-components'
 import { getNativeContanst } from '@/learn/js-bridge/get-native-contanst'
-import { useNativeMethod } from '@/learn/js-bridge/use-native-method'
-import { Button } from 'react-native'
+import { Button, View } from 'react-native'
 
 const Home = (): JSX.Element => {
   return (
-    <>
+    <View style={{ width: '100%', height: '100%' }}>
       {/* <Base></Base> */}
       {/* <SystemView></SystemView> */}
       {/* <SystemText></SystemText> */}
@@ -34,13 +34,14 @@ const Home = (): JSX.Element => {
       {/* <CustomModal></CustomModal> */}
       {/* <LayoutAnimationView></LayoutAnimationView> */}
 
+      <GetNativeComponents></GetNativeComponents>
       <Button
         title="按钮"
         onPress={() => {
           getNativeContanst()
         }}
       ></Button>
-    </>
+    </View>
   )
 }
 

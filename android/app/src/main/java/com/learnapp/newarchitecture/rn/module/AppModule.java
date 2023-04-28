@@ -1,4 +1,4 @@
-package com.learnapp.newarchitecture.rn;
+package com.learnapp.newarchitecture.rn.module;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
