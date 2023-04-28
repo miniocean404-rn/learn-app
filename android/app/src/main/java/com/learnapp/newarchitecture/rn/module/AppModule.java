@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.learnapp.BuildConfig;
-import com.learnapp.newarchitecture.rn.utils.DeviceUtil;
+import com.learnapp.newarchitecture.utils.DeviceUtil;
 
 import java.util.HashMap;
 import java.util.Map;
